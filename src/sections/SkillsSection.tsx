@@ -6,7 +6,7 @@ import { Code } from 'lucide-react';
 
 const CodeIcon = () => (
   <div className="flex items-center justify-center h-6 w-6">
-    <Code className="h-6 w-6 text-primary" />
+    <Code className="h-6 w-6 text-white" />
   </div>
 );
 
@@ -59,6 +59,15 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
         <div className="reveal">
           <SkillCard
             icon={<CodeIcon />}
+            name="Supabase"
+            level={88}
+            color="bg-green-600"
+            delay={350}
+          />
+        </div>
+        <div className="reveal">
+          <SkillCard
+            icon={<CodeIcon />}
             name="Framer"
             level={85}
             color="bg-gradient-to-tr from-black via-purple-600 to-indigo-600"
@@ -71,3 +80,4 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
 );
 
 export default SkillsSection;
+

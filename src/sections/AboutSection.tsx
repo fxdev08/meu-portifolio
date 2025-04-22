@@ -45,20 +45,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ sectionRef }) => (
           <p className="text-muted-foreground">
             Trabalho com <b>FlutterFlow, Bubble, Firebase, Supabase, Framer</b> e outras stacks modernas. A missão: impulsionar negócios com transformação digital e inovação acessível!
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-            <div>
-              <h4 className="font-medium text-lg">Low-code Delivery</h4>
-              <p className="text-muted-foreground">+20 aplicativos criados do zero até o lançamento</p>
-            </div>
-            <div>
-              <h4 className="font-medium text-lg">Automação de Processos</h4>
-              <p className="text-muted-foreground">Construção de fluxos automatizados e integrações robustas</p>
-            </div>
-            <div>
-              <h4 className="font-medium text-lg">Expert em API</h4>
-              <p className="text-muted-foreground">Integração avançada com APIs e serviços externos</p>
-            </div>
-          </div>
+          {/* Removido os cards extras */}
           <Button asChild>
             <a href="#contato">
               Vamos conversar!
