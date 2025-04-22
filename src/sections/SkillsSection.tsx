@@ -2,7 +2,7 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import SkillCard from '@/components/SkillCard';
-import { StackIcon, Code2, Settings } from 'lucide-react';
+import { Database, Code2, Settings } from 'lucide-react';
 
 interface SkillsSectionProps {
   sectionRef: React.RefObject<HTMLElement>;
@@ -52,7 +52,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
         </div>
         <div className="reveal">
           <SkillCard
-            icon={<StackIcon className="h-5 w-5 text-white" />}
+            icon={<Database className="h-5 w-5 text-white" />}
             name="Supabase"
             level={85}
             color="bg-green-600"
