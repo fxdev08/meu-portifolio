@@ -2,7 +2,37 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import SkillCard from '@/components/SkillCard';
-import { Database, Code2, Settings } from 'lucide-react';
+import { Database } from 'lucide-react';
+
+// Ícones personalizados para plataformas que não estão no lucide-react
+const FramerIcon = () => (
+  <img
+    src="https://framerusercontent.com/images/RicnLvGthZrZp47UwjNEC1yI.png"
+    alt="Framer"
+    className="h-6 w-6"
+  />
+);
+const BubbleIcon = () => (
+  <img
+    src="https://seeklogo.com/images/B/bubble-logo-8508CEEDE7-seeklogo.com.png"
+    alt="Bubble"
+    className="h-6 w-6"
+  />
+);
+const FlutterFlowIcon = () => (
+  <img
+    src="https://storage.googleapis.com/devbook-static-assets/ff_icon.png"
+    alt="FlutterFlow"
+    className="h-6 w-6"
+  />
+);
+const FirebaseIcon = () => (
+  <img
+    src="https://www.gstatic.com/devrel-devsite/prod/v7c043a276eae732d5973227f705a8ddc03d0062f29936c1b7d4053d5e1e18bcc/firebase/images/lockup.png"
+    alt="Firebase"
+    className="h-6 w-6"
+  />
+);
 
 interface SkillsSectionProps {
   sectionRef: React.RefObject<HTMLElement>;
@@ -25,7 +55,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className="reveal">
           <SkillCard
-            icon={<img src="https://storage.googleapis.com/devbook-static-assets/ff_icon.png" alt="FlutterFlow" className="h-6 w-6" />}
+            icon={<FlutterFlowIcon />}
             name="FlutterFlow"
             level={95}
             color="bg-blue-500"
@@ -34,7 +64,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
         </div>
         <div className="reveal">
           <SkillCard
-            icon={<img src="https://seeklogo.com/images/B/bubble-logo-8508CEEDE7-seeklogo.com.png" alt="Bubble" className="h-6 w-6" />}
+            icon={<BubbleIcon />}
             name="Bubble"
             level={92}
             color="bg-indigo-400"
@@ -43,7 +73,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
         </div>
         <div className="reveal">
           <SkillCard
-            icon={<img src="https://www.gstatic.com/devrel-devsite/prod/v7c043a276eae732d5973227f705a8ddc03d0062f29936c1b7d4053d5e1e18bcc/firebase/images/lockup.png" alt="Firebase" className="h-6 w-6" />}
+            icon={<FirebaseIcon />}
             name="Firebase"
             level={90}
             color="bg-yellow-500"
@@ -61,20 +91,11 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
         </div>
         <div className="reveal">
           <SkillCard
-            icon={<Code2 className="h-5 w-5 text-white" />}
-            name="OpenAI"
-            level={84}
-            color="bg-stone-400"
+            icon={<FramerIcon />}
+            name="Framer"
+            level={82}
+            color="bg-gradient-to-tr from-black via-purple-600 to-indigo-600"
             delay={500}
-          />
-        </div>
-        <div className="reveal">
-          <SkillCard
-            icon={<Settings className="h-5 w-5 text-white" />}
-            name="UI/UX Design"
-            level={93}
-            color="bg-purple-500"
-            delay={600}
           />
         </div>
       </div>

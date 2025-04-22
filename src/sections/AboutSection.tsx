@@ -32,7 +32,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ sectionRef }) => (
           </div>
           <div className="absolute -bottom-6 -right-6 bg-card p-4 rounded-xl border border-border shadow-lg animate-float">
             <Trophy className="h-8 w-8 text-primary" />
-            <p className="text-sm font-medium mt-1">+5 Anos de experiência</p>
+            <p className="text-sm font-medium mt-1">+2 anos de experiência</p>
           </div>
         </div>
         <div className="reveal space-y-6">
@@ -43,24 +43,20 @@ const AboutSection: React.FC<AboutSectionProps> = ({ sectionRef }) => (
             Além da paixão pela tecnologia, prezo muito pelo <strong>design</strong> e por entregar o máximo de valor em cada projeto.
           </p>
           <p className="text-muted-foreground">
-            Atuo em projetos usando <b>FlutterFlow, Bubble, Firebase, Supabase, OpenAI</b> e outras tecnologias de ponta. Minha missão: impulsionar negócios através da transformação digital e inovação acessível!
+            Atuo em projetos usando <b>FlutterFlow, Bubble, Firebase, Supabase, Framer</b> e outras tecnologias de ponta. Minha missão: impulsionar negócios através da transformação digital e inovação acessível!
           </p>
-          <div className="grid grid-cols-2 gap-6 pt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
             <div>
-              <h4 className="font-medium text-lg">Formação</h4>
-              <p className="text-muted-foreground">Bacharelado em Computação</p>
+              <h4 className="font-medium text-lg">Low-code Delivery</h4>
+              <p className="text-muted-foreground">+20 apps entregues em plataformas low-code</p>
             </div>
             <div>
-              <h4 className="font-medium text-lg">Experiência</h4>
-              <p className="text-muted-foreground">+5 anos</p>
+              <h4 className="font-medium text-lg">Comunidade ativa</h4>
+              <p className="text-muted-foreground">Mentor em comunidade low-code</p>
             </div>
             <div>
-              <h4 className="font-medium text-lg">Projetos</h4>
-              <p className="text-muted-foreground">+30 entregues</p>
-            </div>
-            <div>
-              <h4 className="font-medium text-lg">Cidade</h4>
-              <p className="text-muted-foreground">Brasil</p>
+              <h4 className="font-medium text-lg">Integrações</h4>
+              <p className="text-muted-foreground">Expert em integrações com APIs de mercado</p>
             </div>
           </div>
           <Button asChild>

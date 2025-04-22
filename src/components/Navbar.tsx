@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Code2, Moon, Sun } from "lucide-react";
@@ -60,7 +59,7 @@ const Navbar = () => {
                 <Code2 size={32} className="text-code-blue" />
               </div>
             </div>
-            <span className="text-xl font-bold text-gradient">Dev<span className="font-code">Port</span></span>
+            <span className="text-xl font-bold text-gradient">Felipe Xavier</span>
           </Link>
 
           {/* Desktop Navigation */}

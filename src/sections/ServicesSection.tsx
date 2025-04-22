@@ -2,7 +2,7 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import ServiceCard from '@/components/ServiceCard';
-import { Laptop, MonitorSmartphone, Code2, Layers, Rocket, Code } from 'lucide-react';
+import { Laptop, MonitorSmartphone, Code2, Layers, Rocket, Zap } from 'lucide-react';
 
 interface ServicesSectionProps {
   sectionRef: React.RefObject<HTMLElement>;
@@ -65,9 +65,9 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ sectionRef }) => (
         </div>
         <div className="reveal">
           <ServiceCard
-            icon={<Code size={36} />}
-            title="Consultoria e Mentoria"
-            description="Mentoria estratégica para acelerar projetos digitais e revisão de arquitetura de sistemas."
+            icon={<Zap size={36} />}
+            title="Automação de Processos"
+            description="Automatize fluxos e reduza tarefas repetitivas usando soluções low-code e integrações inteligentes."
             delay={600}
           />
         </div>
