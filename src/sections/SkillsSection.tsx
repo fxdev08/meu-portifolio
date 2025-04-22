@@ -2,9 +2,8 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import SkillCard from '@/components/SkillCard';
-import { Database } from 'lucide-react';
+import { Database, Code, FileCode, LayoutGrid, Terminal } from 'lucide-react';
 
-// Ícones personalizados para plataformas que não estão no lucide-react
 const FramerIcon = () => (
   <img
     src="https://framerusercontent.com/images/RicnLvGthZrZp47UwjNEC1yI.png"
@@ -49,7 +48,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Tecnologias</h2>
         <Separator className="mx-auto w-20 bg-primary" />
         <p className="text-muted-foreground mt-6">
-          Crio experiências sólidas com as stacks mais modernas do mundo de Low/No Code.
+          Crio experiências sólidas com as stacks mais modernas do universo Low/No Code.
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -96,6 +95,15 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
             level={82}
             color="bg-gradient-to-tr from-black via-purple-600 to-indigo-600"
             delay={500}
+          />
+        </div>
+        <div className="reveal">
+          <SkillCard
+            icon={<LayoutGrid className="h-5 w-5 text-white" />}
+            name="Integrações/Automação"
+            level={80}
+            color="bg-primary"
+            delay={600}
           />
         </div>
       </div>

@@ -9,19 +9,16 @@ interface HeroSectionProps {
   sectionRef: React.RefObject<HTMLElement>;
 }
 
+// Código animado: mensagem curta para Low Code
 const codeSnippets = [
-  "const criador = 'Felipe Xavier';",
-  "const especialidade = 'Low Code - UI/UX & Inovação';",
-  "",
-  "// Felicidade é transformar ideias em soluções incríveis!",
-  "function construir(portfolio) {",
-  "  usar('paixão');",
-  "  inovar();",
-  "  criarUXincrível();",
-  "  return sucesso;",
-  "}",
-  "",
-  "// #FocoNoCliente #StackModerna"
+  "// Transforme sua ideia em realidade",
+  "const app = criarApp( {",
+  "  plataforma: 'Low Code',",
+  "  velocidade: 'Alta',",
+  "  design: 'Profissional'",
+  "} );",
+  "publicar(app);",
+  "// Tenha seu app sem código!"
 ];
 
 const HeroSection: React.FC<HeroSectionProps> = ({ sectionRef }) => (

@@ -40,23 +40,23 @@ const AboutSection: React.FC<AboutSectionProps> = ({ sectionRef }) => (
             Sou <span className="text-gradient">Felipe Xavier</span>, especialista em desenvolvimento Low Code, focado em criar <strong>soluções inovadoras</strong> e experiências incríveis.
           </h3>
           <p className="text-muted-foreground">
-            Além da paixão pela tecnologia, prezo muito pelo <strong>design</strong> e por entregar o máximo de valor em cada projeto.
+            Apaixonado por tecnologia, prático em design, entregando valor real a cada projeto — sempre com agilidade e foco em <strong>prototipagem rápida</strong>.
           </p>
           <p className="text-muted-foreground">
-            Atuo em projetos usando <b>FlutterFlow, Bubble, Firebase, Supabase, Framer</b> e outras tecnologias de ponta. Minha missão: impulsionar negócios através da transformação digital e inovação acessível!
+            Trabalho com <b>FlutterFlow, Bubble, Firebase, Supabase, Framer</b> e outras stacks modernas. A missão: impulsionar negócios com transformação digital e inovação acessível!
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
             <div>
               <h4 className="font-medium text-lg">Low-code Delivery</h4>
-              <p className="text-muted-foreground">+20 apps entregues em plataformas low-code</p>
+              <p className="text-muted-foreground">+20 aplicativos criados do zero até o lançamento</p>
             </div>
             <div>
-              <h4 className="font-medium text-lg">Comunidade ativa</h4>
-              <p className="text-muted-foreground">Mentor em comunidade low-code</p>
+              <h4 className="font-medium text-lg">Automação de Processos</h4>
+              <p className="text-muted-foreground">Construção de fluxos automatizados e integrações robustas</p>
             </div>
             <div>
-              <h4 className="font-medium text-lg">Integrações</h4>
-              <p className="text-muted-foreground">Expert em integrações com APIs de mercado</p>
+              <h4 className="font-medium text-lg">Expert em API</h4>
+              <p className="text-muted-foreground">Integração avançada com APIs e serviços externos</p>
             </div>
           </div>
           <Button asChild>

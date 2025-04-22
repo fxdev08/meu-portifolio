@@ -20,6 +20,11 @@ const Index: React.FC = () => {
   };
 
   useEffect(() => {
+    // Atualiza o título da aba (hack já que index.html é read-only)
+    document.title = "Felipe Xavier";
+  }, []);
+
+  useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
