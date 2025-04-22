@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ChevronDown, Code, Code2, Github, Laptop, Layers, Linkedin, Mail, MonitorSmartphone, Rocket, Trophy, Twitter, Component as StackIcon, Settings, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -10,6 +9,7 @@ import CodeAnimation from '@/components/CodeAnimation';
 import ProjectCard from '@/components/ProjectCard';
 import SkillCard from '@/components/SkillCard';
 import ServiceCard from '@/components/ServiceCard';
+import ContactForm from '@/components/ContactForm';
 
 const Index: React.FC = () => {
   const sectionRefs = {
