@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { ChevronDown, Code, Code2, Github, Laptop, Layers, Linkedin, Mail, MonitorSmartphone, Rocket, Trophy, Twitter } from 'lucide-react';
+import { ChevronDown, Code, Code2, Github, Laptop, Layers, Linkedin, Mail, MonitorSmartphone, Rocket, Trophy, Twitter, Component as StackIcon, Settings, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import Navbar from '@/components/Navbar';
@@ -10,7 +10,6 @@ import CodeAnimation from '@/components/CodeAnimation';
 import ProjectCard from '@/components/ProjectCard';
 import SkillCard from '@/components/SkillCard';
 import ServiceCard from '@/components/ServiceCard';
-import ContactForm from '@/components/ContactForm';
 
 const Index: React.FC = () => {
   const sectionRefs = {
@@ -22,7 +21,6 @@ const Index: React.FC = () => {
     contact: useRef<HTMLElement>(null)
   };
 
-  // Observer for scroll animations
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -41,30 +39,20 @@ const Index: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Code snippets for animation
+  // Trecho animado relacionado à programação para Felipe Xavier
   const codeSnippets = [
-    "const Portfolio = () => {",
-    "  const [skills, setSkills] = useState([]);",
-    "  const [projects, setProjects] = useState([]);",
+    "const criador = 'Felipe Xavier';",
+    "const especialidade = 'Low Code - UI/UX & Inovação';",
     "",
-    "  // Fetch data on component mount",
-    "  useEffect(() => {",
-    "    fetchSkills();",
-    "    fetchProjects();",
-    "  }, []);",
+    "// Felicidade é transformar ideias em soluções incríveis!",
+    "function construir(portfolio) {",
+    "  usar('paixão');",
+    "  inovar();",
+    "  criarUXincrível();",
+    "  return sucesso;",
+    "}",
     "",
-    "  return (",
-    "    <main className=\"portfolio\">",
-    "      <Hero />",
-    "      <About />",
-    "      <Skills data={skills} />",
-    "      <Projects data={projects} />",
-    "      <Contact />",
-    "    </main>",
-    "  );",
-    "};",
-    "",
-    "export default Portfolio;"
+    "// #FocoNoCliente #StackModerna"
   ];
 
   return (
@@ -82,36 +70,34 @@ const Index: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="reveal space-y-6 md:pr-10">
               <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full">
-                <span className="font-medium">Full-Stack Developer</span>
+                <span className="font-medium">Desenvolvedor Low Code & Inovador</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Creating <span className="text-gradient">Modern Web</span> Experiences
+                Olá, sou <span className="text-gradient">Felipe Xavier</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                Transforming ideas into elegant, functional web applications with cutting-edge technologies.
+                Meu propósito é criar experiências digitais modernas e inovadoras, focando em <strong>UI/UX de excelência</strong> para ajudar pessoas e negócios a crescerem.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <Button size="lg" className="group">
-                  View My Work
-                  <ChevronDown className="ml-2 group-hover:translate-y-1 transition-transform" />
+                <Button size="lg" className="group" asChild>
+                  <a href="#projetos">Veja meus projetos
+                    <ChevronDown className="ml-2 group-hover:translate-y-1 transition-transform" />
+                  </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <a href="#contact">
-                    Contact Me
+                  <a href="#contato">
+                    Fale comigo
                   </a>
                 </Button>
               </div>
               <div className="flex gap-5 pt-4">
-                <a href="https://github.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://github.com/fxdev08/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Github />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.linkedin.com/in/felipe-xavier-reis-de-jesus-a024a82a5/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Linkedin />
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Twitter />
-                </a>
-                <a href="mailto:example@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="mailto:felipexreisjj@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                   <Mail />
                 </a>
               </div>
@@ -139,7 +125,7 @@ const Index: React.FC = () => {
       >
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16 reveal">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Sobre Mim</h2>
             <Separator className="mx-auto w-20 bg-primary" />
           </div>
 
@@ -149,49 +135,49 @@ const Index: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-code-blue/30 rounded-xl blur-3xl opacity-30"></div>
                 <img 
                   src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop" 
-                  alt="Developer coding" 
+                  alt="Felipe Xavier programando" 
                   className="w-full h-full object-cover rounded-2xl"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-card p-4 rounded-xl border border-border shadow-lg animate-float">
                 <Trophy className="h-8 w-8 text-primary" />
-                <p className="text-sm font-medium mt-1">5+ Years Experience</p>
+                <p className="text-sm font-medium mt-1">+5 Anos de experiência</p>
               </div>
             </div>
 
             <div className="reveal space-y-6">
               <h3 className="text-2xl font-semibold">
-                Passionate <span className="text-gradient">Web Developer</span> with modern technology skills
+                Sou <span className="text-gradient">Felipe Xavier</span>, especialista em desenvolvimento Low Code, focado em criar <strong>soluções inovadoras</strong> e experiências incríveis.
               </h3>
               <p className="text-muted-foreground">
-                I'm a dedicated full-stack developer with a passion for creating engaging web experiences that combine beautiful design with efficient functionality.
+                Além da paixão pela tecnologia, prezo muito pelo <strong>design</strong> e por entregar o máximo de valor em cada projeto. 
               </p>
               <p className="text-muted-foreground">
-                With expertise in React, TypeScript, Node.js, and modern front-end frameworks, I build applications that are not only visually appealing but also performant and maintainable.
+                Atuo em projetos usando <b>FlutterFlow, Bubble, Firebase, Supabase, OpenAI</b> e outras tecnologias de ponta. Minha missão: impulsionar negócios através da transformação digital e inovação acessível!
               </p>
               
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div>
-                  <h4 className="font-medium text-lg">Education</h4>
-                  <p className="text-muted-foreground">B.Sc. Computer Science</p>
+                  <h4 className="font-medium text-lg">Formação</h4>
+                  <p className="text-muted-foreground">Bacharelado em Computação</p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-lg">Experience</h4>
-                  <p className="text-muted-foreground">5+ Years</p>
+                  <h4 className="font-medium text-lg">Experiência</h4>
+                  <p className="text-muted-foreground">+5 anos</p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-lg">Projects</h4>
-                  <p className="text-muted-foreground">30+ Completed</p>
+                  <h4 className="font-medium text-lg">Projetos</h4>
+                  <p className="text-muted-foreground">+30 entregues</p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-lg">Location</h4>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <h4 className="font-medium text-lg">Cidade</h4>
+                  <p className="text-muted-foreground">Brasil</p>
                 </div>
               </div>
 
               <Button asChild>
-                <a href="#contact">
-                  Let's Talk
+                <a href="#contato">
+                  Vamos conversar!
                 </a>
               </Button>
             </div>
@@ -207,93 +193,66 @@ const Index: React.FC = () => {
       >
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16 reveal">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">My Skills</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Tecnologias</h2>
             <Separator className="mx-auto w-20 bg-primary" />
             <p className="text-muted-foreground mt-6">
-              Leveraging modern technologies to build robust and scalable applications.
+              Crio experiências sólidas com as stacks mais modernas do mundo de Low/No Code.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="reveal">
               <SkillCard 
-                icon={<Code2 className="h-5 w-5 text-white" />} 
-                name="JavaScript/TypeScript" 
+                icon={<img src="https://storage.googleapis.com/devbook-static-assets/ff_icon.png" alt="FlutterFlow" className="h-6 w-6" />} 
+                name="FlutterFlow" 
                 level={95} 
-                color="bg-code-blue"
+                color="bg-blue-500"
                 delay={100}
               />
             </div>
             <div className="reveal">
               <SkillCard 
-                icon={<Code className="h-5 w-5 text-white" />} 
-                name="React" 
-                level={90} 
-                color="bg-code-blue"
+                icon={<img src="https://seeklogo.com/images/B/bubble-logo-8508CEEDE7-seeklogo.com.png" alt="Bubble" className="h-6 w-6" />} 
+                name="Bubble" 
+                level={92} 
+                color="bg-indigo-400"
                 delay={200}
               />
             </div>
             <div className="reveal">
               <SkillCard 
-                icon={<Layers className="h-5 w-5 text-white" />} 
-                name="Node.js" 
-                level={85} 
-                color="bg-code-green"
+                icon={<img src="https://www.gstatic.com/devrel-devsite/prod/v7c043a276eae732d5973227f705a8ddc03d0062f29936c1b7d4053d5e1e18bcc/firebase/images/lockup.png" alt="Firebase" className="h-6 w-6" />} 
+                name="Firebase" 
+                level={90} 
+                color="bg-yellow-500"
                 delay={300}
               />
             </div>
             <div className="reveal">
               <SkillCard 
-                icon={<Layers className="h-5 w-5 text-white" />} 
-                name="CSS/SCSS/Tailwind" 
-                level={88} 
-                color="bg-code-purple"
+                icon={<StackIcon className="h-5 w-5 text-white" />} 
+                name="Supabase" 
+                level={85} 
+                color="bg-green-600"
                 delay={400}
               />
             </div>
             <div className="reveal">
               <SkillCard 
                 icon={<Code2 className="h-5 w-5 text-white" />} 
-                name="Next.js" 
-                level={80} 
-                color="bg-code-blue"
+                name="OpenAI" 
+                level={84} 
+                color="bg-stone-400"
                 delay={500}
               />
             </div>
             <div className="reveal">
               <SkillCard 
-                icon={<Code className="h-5 w-5 text-white" />} 
-                name="GraphQL" 
-                level={75} 
-                color="bg-code-purple"
-                delay={600}
-              />
-            </div>
-            <div className="reveal">
-              <SkillCard 
-                icon={<Layers className="h-5 w-5 text-white" />} 
-                name="MongoDB" 
-                level={82} 
-                color="bg-code-green"
-                delay={700}
-              />
-            </div>
-            <div className="reveal">
-              <SkillCard 
-                icon={<Code className="h-5 w-5 text-white" />} 
+                icon={<Settings className="h-5 w-5 text-white" />} 
                 name="UI/UX Design" 
-                level={78} 
-                color="bg-code-purple"
-                delay={800}
-              />
-            </div>
-            <div className="reveal">
-              <SkillCard 
-                icon={<Layers className="h-5 w-5 text-white" />} 
-                name="AWS/Firebase" 
-                level={72} 
-                color="bg-code-orange"
-                delay={900}
+                level={93} 
+                color="bg-purple-500"
+                delay={600}
               />
             </div>
           </div>
@@ -308,10 +267,10 @@ const Index: React.FC = () => {
       >
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16 reveal">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">My Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">O que posso fazer por você</h2>
             <Separator className="mx-auto w-20 bg-primary" />
             <p className="text-muted-foreground mt-6">
-              I offer a comprehensive range of development and design services to meet your needs.
+              Serviços para levar seu produto digital a outro nível, com performance e visual incríveis.
             </p>
           </div>
 
@@ -319,48 +278,48 @@ const Index: React.FC = () => {
             <div className="reveal">
               <ServiceCard
                 icon={<Laptop size={36} />}
-                title="Web Development"
-                description="Creating responsive, performant websites and web applications using modern frameworks and best practices."
+                title="Criação de Apps Low Code"
+                description="Desenvolvimento rápido de apps web/mobile com alta qualidade, usando FlutterFlow e Bubble, em prazos reduzidos."
                 delay={100}
               />
             </div>
             <div className="reveal">
               <ServiceCard
                 icon={<MonitorSmartphone size={36} />}
-                title="Full Stack Development"
-                description="End-to-end solutions combining frontend interfaces with robust backend systems and databases."
+                title="Backoffice & Dashboards"
+                description="Painéis de controle interativos, personalizados para empresas, com dashboards e relatórios visuais."
                 delay={200}
               />
             </div>
             <div className="reveal">
               <ServiceCard
                 icon={<Code2 size={36} />}
-                title="API Development"
-                description="Building secure, scalable, and well-documented APIs to power your applications and services."
+                title="Integrações e APIs"
+                description="Integração entre plataformas, automação de processos usando APIs de mercado (OpenAI, Twilio, bancos, WhatsApp, CRMs, etc)"
                 delay={300}
               />
             </div>
             <div className="reveal">
               <ServiceCard
                 icon={<Layers size={36} />}
-                title="UI/UX Design"
-                description="Crafting intuitive user interfaces and enjoyable user experiences that engage and convert."
+                title="UI/UX Personalizado"
+                description="Projetos únicos, centrados no usuário, com foco total em experiência e identidade visual modernas."
                 delay={400}
               />
             </div>
             <div className="reveal">
               <ServiceCard
                 icon={<Rocket size={36} />}
-                title="Performance Optimization"
-                description="Improving website speed, responsiveness and overall performance for better user experience."
+                title="Inovação com Inteligência Artificial"
+                description="Inclua I.A. no seu produto: chatbots, geração de texto, automações inteligentes e mais."
                 delay={500}
               />
             </div>
             <div className="reveal">
               <ServiceCard
                 icon={<Code size={36} />}
-                title="Code Consultation"
-                description="Code reviews, architecture planning, and technical guidance for your development team."
+                title="Consultoria e Mentoria"
+                description="Mentoria estratégica para acelerar projetos digitais e revisão de arquitetura de sistemas."
                 delay={600}
               />
             </div>
@@ -371,83 +330,61 @@ const Index: React.FC = () => {
       {/* Projects Section */}
       <section 
         ref={sectionRefs.projects}
-        id="projects" 
+        id="projetos" 
         className="py-20 bg-gradient"
       >
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16 reveal">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Featured Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Projetos Realizados</h2>
             <Separator className="mx-auto w-20 bg-primary" />
             <p className="text-muted-foreground mt-6">
-              A collection of my recent work showcasing my skills and expertise.
+              Veja alguns produtos digitais que criei com foco em inovação e usabilidade:
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="reveal">
               <ProjectCard
-                title="E-Commerce Platform"
-                description="A modern online store with cart, checkout and payment processing functionality."
-                tags={["React", "Node.js", "MongoDB", "Stripe"]}
+                title="Gerentify"
+                description="Aplicativo de gestão de vendas. Registre clientes, fornecedores, gerencie toda sua empresa e tenha controle completo sobre negócios e oportunidades."
+                tags={["Bubble", "No Code"]}
                 imageUrl="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=800&auto=format&fit=crop"
-                githubUrl="https://github.com"
-                liveUrl="https://example.com"
+                githubUrl=""
+                liveUrl="http://gerentify.bubbleapps.io/"
                 index={0}
               />
             </div>
             <div className="reveal">
               <ProjectCard
-                title="Dashboard Analytics"
-                description="Real-time analytics dashboard for monitoring business metrics and KPIs."
-                tags={["React", "TypeScript", "D3.js", "Firebase"]}
-                imageUrl="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=800&auto=format&fit=crop"
-                githubUrl="https://github.com"
-                liveUrl="https://example.com"
+                title="Pergunta A.I"
+                description="App de I.A. com Gemini para gerar respostas, salvando interações no armazenamento local para consulta posterior."
+                tags={["FlutterFlow", "Gemini", "AI"]}
+                imageUrl="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"
+                githubUrl=""
+                liveUrl="https://perguntaai.flutterflow.app/"
                 index={1}
               />
             </div>
             <div className="reveal">
               <ProjectCard
-                title="Social Media App"
-                description="Full-featured social platform with real-time messaging and content sharing."
-                tags={["React Native", "GraphQL", "AWS"]}
-                imageUrl="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"
-                githubUrl="https://github.com"
-                liveUrl="https://example.com"
+                title="Copy ai"
+                description="Projeto experimental onde um chatbot cria textos persuasivos de vendas, usando técnicas de IA conversacional."
+                tags={["Bubble", "OpenAI"]}
+                imageUrl="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=800&auto=format&fit=crop"
+                githubUrl=""
+                liveUrl="https://copyia-55457.bubbleapps.io/"
                 index={2}
               />
             </div>
             <div className="reveal">
               <ProjectCard
-                title="Task Management Tool"
-                description="Collaborative project management application with advanced task tracking."
-                tags={["Vue.js", "Express", "PostgreSQL"]}
-                imageUrl="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=800&auto=format&fit=crop"
-                githubUrl="https://github.com"
-                liveUrl="https://example.com"
-                index={3}
-              />
-            </div>
-            <div className="reveal">
-              <ProjectCard
-                title="Fitness Tracker"
-                description="Mobile app for tracking workouts, nutrition, and health metrics."
-                tags={["React Native", "Firebase", "Redux"]}
+                title="Lista de tarefas"
+                description="Aplicativo simples (feita no FlutterFlow) para listas de tarefas - funciona offline e tem modo PWA. Crie, delete, marque tarefas, totalmente do seu jeito!"
+                tags={["FlutterFlow", "PWA"]}
                 imageUrl="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=800&auto=format&fit=crop"
-                githubUrl="https://github.com"
-                liveUrl="https://example.com"
-                index={4}
-              />
-            </div>
-            <div className="reveal">
-              <ProjectCard
-                title="AI Content Generator"
-                description="Web application that leverages AI to generate various types of content."
-                tags={["Next.js", "OpenAI API", "Tailwind CSS"]}
-                imageUrl="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"
-                githubUrl="https://github.com"
-                liveUrl="https://example.com"
-                index={5}
+                githubUrl=""
+                liveUrl="https://www.devbook.app/"
+                index={3}
               />
             </div>
           </div>
@@ -457,23 +394,23 @@ const Index: React.FC = () => {
       {/* Contact Section */}
       <section 
         ref={sectionRefs.contact}
-        id="contact" 
+        id="contato" 
         className="py-20"
       >
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16 reveal">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Get In Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Fale comigo!</h2>
             <Separator className="mx-auto w-20 bg-primary" />
             <p className="text-muted-foreground mt-6">
-              Have a project in mind? Let's collaborate and bring your ideas to life.
+              Tem uma ideia ou projeto? Vamos transformar juntos em inovação real e com qualidade!
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="reveal space-y-8">
-              <h3 className="text-2xl font-semibold">Let's discuss your project</h3>
+              <h3 className="text-2xl font-semibold">Vamos conversar?</h3>
               <p className="text-muted-foreground">
-                Fill out the form and I'll get back to you as soon as possible. Alternatively, reach out to me directly through any of these channels:
+                Preencha o formulário ou me chame diretamente pelos canais abaixo:
               </p>
               
               <div className="space-y-6">
@@ -482,8 +419,8 @@ const Index: React.FC = () => {
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium">Email</p>
-                    <a href="mailto:hello@example.com" className="text-muted-foreground hover:text-primary">hello@example.com</a>
+                    <p className="font-medium">E-mail</p>
+                    <a href="mailto:felipexreisjj@gmail.com" className="text-muted-foreground hover:text-primary">felipexreisjj@gmail.com</a>
                   </div>
                 </div>
                 
@@ -493,7 +430,7 @@ const Index: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-medium">GitHub</p>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">github.com/devport</a>
+                    <a href="https://github.com/fxdev08/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">github.com/fxdev08</a>
                   </div>
                 </div>
                 
@@ -503,7 +440,7 @@ const Index: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-medium">LinkedIn</p>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">linkedin.com/in/devport</a>
+                    <a href="https://www.linkedin.com/in/felipe-xavier-reis-de-jesus-a024a82a5/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">LinkedIn</a>
                   </div>
                 </div>
               </div>
@@ -518,7 +455,7 @@ const Index: React.FC = () => {
 
       <Footer />
 
-      {/* Additional CSS for keyframe animations */}
+      {/* Animações personalizadas */}
       <style>{`
         @keyframes skill-progress {
           from { width: 0; }
