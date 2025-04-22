@@ -2,26 +2,11 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import SkillCard from '@/components/SkillCard';
-import { Code, LayoutGrid, Terminal, FileCode } from 'lucide-react';
+import { Code } from 'lucide-react';
 
-const FramerIcon = () => (
+const CodeIcon = () => (
   <div className="flex items-center justify-center h-6 w-6">
-    <FileCode className="h-6 w-6 text-purple-400" />
-  </div>
-);
-const BubbleIcon = () => (
-  <div className="flex items-center justify-center h-6 w-6">
-    <LayoutGrid className="h-6 w-6 text-blue-400" />
-  </div>
-);
-const FlutterFlowIcon = () => (
-  <div className="flex items-center justify-center h-6 w-6">
-    <Terminal className="h-6 w-6 text-blue-500" />
-  </div>
-);
-const FirebaseIcon = () => (
-  <div className="flex items-center justify-center h-6 w-6">
-    <Code className="h-6 w-6 text-yellow-500" />
+    <Code className="h-6 w-6 text-primary" />
   </div>
 );
 
@@ -46,7 +31,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className="reveal">
           <SkillCard
-            icon={<FlutterFlowIcon />}
+            icon={<CodeIcon />}
             name="FlutterFlow"
             level={95}
             color="bg-blue-500"
@@ -55,7 +40,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
         </div>
         <div className="reveal">
           <SkillCard
-            icon={<BubbleIcon />}
+            icon={<CodeIcon />}
             name="Bubble"
             level={92}
             color="bg-indigo-400"
@@ -64,7 +49,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
         </div>
         <div className="reveal">
           <SkillCard
-            icon={<FirebaseIcon />}
+            icon={<CodeIcon />}
             name="Firebase"
             level={90}
             color="bg-yellow-500"
@@ -73,7 +58,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
         </div>
         <div className="reveal">
           <SkillCard
-            icon={<FramerIcon />}
+            icon={<CodeIcon />}
             name="Framer"
             level={85}
             color="bg-gradient-to-tr from-black via-purple-600 to-indigo-600"
@@ -84,4 +69,5 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
     </div>
   </section>
 );
+
 export default SkillsSection;
