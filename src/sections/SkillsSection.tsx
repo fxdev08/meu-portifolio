@@ -2,35 +2,27 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import SkillCard from '@/components/SkillCard';
-import { Database, Code, FileCode, LayoutGrid, Terminal } from 'lucide-react';
+import { Code, LayoutGrid, Terminal, FileCode } from 'lucide-react';
 
 const FramerIcon = () => (
-  <img
-    src="https://framerusercontent.com/images/RicnLvGthZrZp47UwjNEC1yI.png"
-    alt="Framer"
-    className="h-6 w-6"
-  />
+  <div className="flex items-center justify-center h-6 w-6">
+    <FileCode className="h-6 w-6 text-purple-400" />
+  </div>
 );
 const BubbleIcon = () => (
-  <img
-    src="https://seeklogo.com/images/B/bubble-logo-8508CEEDE7-seeklogo.com.png"
-    alt="Bubble"
-    className="h-6 w-6"
-  />
+  <div className="flex items-center justify-center h-6 w-6">
+    <LayoutGrid className="h-6 w-6 text-blue-400" />
+  </div>
 );
 const FlutterFlowIcon = () => (
-  <img
-    src="https://storage.googleapis.com/devbook-static-assets/ff_icon.png"
-    alt="FlutterFlow"
-    className="h-6 w-6"
-  />
+  <div className="flex items-center justify-center h-6 w-6">
+    <Terminal className="h-6 w-6 text-blue-500" />
+  </div>
 );
 const FirebaseIcon = () => (
-  <img
-    src="https://www.gstatic.com/devrel-devsite/prod/v7c043a276eae732d5973227f705a8ddc03d0062f29936c1b7d4053d5e1e18bcc/firebase/images/lockup.png"
-    alt="Firebase"
-    className="h-6 w-6"
-  />
+  <div className="flex items-center justify-center h-6 w-6">
+    <Code className="h-6 w-6 text-yellow-500" />
+  </div>
 );
 
 interface SkillsSectionProps {
@@ -48,7 +40,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Tecnologias</h2>
         <Separator className="mx-auto w-20 bg-primary" />
         <p className="text-muted-foreground mt-6">
-          Crio experiências sólidas com as stacks mais modernas do universo Low/No Code.
+          Especialista em plataformas modernas de desenvolvimento Low Code/No Code.
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -81,29 +73,11 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
         </div>
         <div className="reveal">
           <SkillCard
-            icon={<Database className="h-5 w-5 text-white" />}
-            name="Supabase"
-            level={85}
-            color="bg-green-600"
-            delay={400}
-          />
-        </div>
-        <div className="reveal">
-          <SkillCard
             icon={<FramerIcon />}
             name="Framer"
-            level={82}
+            level={85}
             color="bg-gradient-to-tr from-black via-purple-600 to-indigo-600"
-            delay={500}
-          />
-        </div>
-        <div className="reveal">
-          <SkillCard
-            icon={<LayoutGrid className="h-5 w-5 text-white" />}
-            name="Integrações/Automação"
-            level={80}
-            color="bg-primary"
-            delay={600}
+            delay={400}
           />
         </div>
       </div>

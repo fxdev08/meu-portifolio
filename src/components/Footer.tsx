@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold text-gradient">Felipe<span className="font-code">Xavier</span></span>
             </Link>
             <p className="text-muted-foreground">
-              Soluções digitais inovadoras, modernas e com UI/UX de alto padrão.
+              Soluções digitais inovadoras em Low Code/No Code, entregando agilidade e qualidade.
             </p>
           </div>
           
@@ -27,8 +27,8 @@ const Footer: React.FC = () => {
               <a href="#home" className="text-muted-foreground hover:text-primary transition-colors">Início</a>
               <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">Sobre</a>
               <a href="#skills" className="text-muted-foreground hover:text-primary transition-colors">Tecnologias</a>
-              <a href="#projetos" className="text-muted-foreground hover:text-primary transition-colors">Projetos</a>
-              <a href="#contato" className="text-muted-foreground hover:text-primary transition-colors">Contato</a>
+              <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors">Projetos</a>
+              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contato</a>
             </nav>
           </div>
           

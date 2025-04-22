@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Code2, Moon, Sun } from "lucide-react";
@@ -29,11 +30,11 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" }
+    { name: "Início", href: "#home" },
+    { name: "Sobre", href: "#about" },
+    { name: "Tecnologias", href: "#skills" },
+    { name: "Projetos", href: "#projects" },
+    { name: "Contato", href: "#contact" }
   ];
 
   return (
