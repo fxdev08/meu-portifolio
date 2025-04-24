@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Code2, Framer } from "lucide-react";
+import { Menu, X, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -52,17 +51,15 @@ const Navbar = () => {
             onClick={() => window.scrollTo(0, 0)}
           >
             <div className="relative">
-              <Framer 
+              <Code2 
                 size={32} 
                 className="text-primary animate-pulse-glow transition-colors" 
               />
               <div className="absolute inset-0 animate-rotate-slow opacity-50 group-hover:opacity-70">
-                <Framer size={32} className="text-code-blue" />
+                <Code2 size={32} className="text-code-blue" />
               </div>
             </div>
-            <span className="text-xl font-bold text-gradient">
-              <span className="hidden">F</span>elipe Xavier
-            </span>
+            <span className="text-xl font-bold text-gradient">Felipe Xavier</span>
           </Link>
 
           {/* Desktop Navigation */}
