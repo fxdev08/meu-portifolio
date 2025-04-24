@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Code2, Moon } from "lucide-react";
+import { Menu, X, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -77,15 +77,7 @@ const Navbar = () => {
           
           {/* Theme Toggle and Mobile Menu */}
           <div className="flex items-center">
-            <Button 
-              variant="ghost" 
-              size="icon"
-              onClick={toggleTheme}
-              className="mr-2 hover:bg-primary/10"
-              aria-label="Toggle theme"
-            >
-              <Moon className="h-5 w-5 text-primary animate-scale-in" />
-            </Button>
+            {/* Theme toggle button removed */}
 
             {/* Mobile Menu Toggle */}
             <Button
