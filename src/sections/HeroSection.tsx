@@ -1,6 +1,5 @@
 
 import React from "react";
-import CodeAnimation from "@/components/CodeAnimation";
 
 interface HeroSectionProps {
   sectionRef: React.RefObject<HTMLElement>;
@@ -13,15 +12,7 @@ const data = [
   { label: "Projetos entregues no prazo", value: true },
 ];
 
-const codeLines = [
-  "// Crie seu app com Low Code",
-  "const app = {",
-  "  nome: 'Seu App',",
-  "  tipo: 'Mobile/Web',",
-  "  prazo: 'Rápido',",
-  "  qualidade: 'Profissional'",
-  "};"
-];
+const animatedCode = `<h2>Tenha um app seu criado com LowCode!</h2>`;
 
 const HeroSection: React.FC<HeroSectionProps> = ({ sectionRef }) => (
   <section
@@ -48,12 +39,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ sectionRef }) => (
         ))}
       </div>
 
-      <div className="relative max-w-lg w-full bg-card border border-border rounded-lg p-6 text-left overflow-x-auto shadow-lg">
-        <CodeAnimation lines={codeLines} delay={500} />
+      <div className="relative max-w-lg w-full bg-card border border-border rounded-lg p-6 text-left overflow-x-auto font-mono mb-6 shadow-lg animate-fade-in">
+        <span className="block text-green-400">&lt;!-- LowCode --&gt;</span>
+        <div className="text-white text-lg whitespace-pre">
+          {animatedCode}
+        </div>
       </div>
     </div>
   </section>
 );
 
 export default HeroSection;
-
