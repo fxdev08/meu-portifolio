@@ -24,8 +24,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ sectionRef }) => (
       <h1 className="text-4xl md:text-6xl font-bold text-gradient mb-6 max-w-2xl mx-auto">
         Construo soluções digitais rápidas e sob medida com plataformas Low Code.
       </h1>
-      <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-xl mx-auto code-snippet">
-        <span className="typing">Acelere seu negócio com apps profissionais, integrações e automações – tudo criado sem complicação.</span>
+      <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-xl mx-auto">
+        Acelere seu negócio com apps profissionais, integrações e automações – tudo criado sem complicação.
       </p>
       
       <div className="flex flex-wrap justify-center gap-3 mb-8">
