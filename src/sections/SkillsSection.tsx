@@ -51,7 +51,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
           <SkillCard
             icon={<CodeIcon />}
             name="Firebase"
-            level={90}
+            level={80}
             color="bg-yellow-500"
             delay={300}
           />
@@ -60,7 +60,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
           <SkillCard
             icon={<CodeIcon />}
             name="Supabase"
-            level={88}
+            level={30}
             color="bg-green-600"
             delay={350}
           />
@@ -69,7 +69,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ sectionRef }) => (
           <SkillCard
             icon={<CodeIcon />}
             name="Framer"
-            level={85}
+            level={20}
             color="bg-gradient-to-tr from-black via-purple-600 to-indigo-600"
             delay={400}
           />
