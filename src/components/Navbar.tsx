@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Code2, Moon, Sun } from "lucide-react";
+import { Menu, X, Code2, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -85,11 +84,7 @@ const Navbar = () => {
               className="mr-2 hover:bg-primary/10"
               aria-label="Toggle theme"
             >
-              {isDarkMode ? (
-                <Sun className="h-5 w-5 text-yellow-400 animate-scale-in" />
-              ) : (
-                <Moon className="h-5 w-5 text-primary animate-scale-in" />
-              )}
+              <Moon className="h-5 w-5 text-primary animate-scale-in" />
             </Button>
 
             {/* Mobile Menu Toggle */}
